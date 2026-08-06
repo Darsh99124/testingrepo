@@ -1,0 +1,174 @@
+{
+  "createdBy" : "darshan.m@releaseowl.com",
+  "creationDate" : 1786026005450,
+  "lastModifiedBy" : "darshan.m@releaseowl.com",
+  "lastModifiedDate" : 1786026005450,
+  "id" : 123,
+  "name" : "new cpi test case",
+  "description" : "new cpi test case",
+  "testType" : "ALL_MESSAGES",
+  "projectId" : 143,
+  "envId" : 877,
+  "artifactId" : "GetDiscountDetails",
+  "artifactName" : "GetDiscountDetails",
+  "artifactVersion" : "1.0.5",
+  "roVersionId" : 3081,
+  "protocol" : null,
+  "endPoint" : "https://bd2ad380trial.it-cpitrial03-rt.cfapps.ap21.hana.ondemand.com/http/itemsdiscount",
+  "adapterType" : "HTTPS",
+  "address" : null,
+  "csrfProtected" : false,
+  "active" : true,
+  "flowExecStatus" : "COMPLETED",
+  "expectedMessages" : [ {
+    "id" : 451,
+    "mplId" : "AGp0l917krne4ttsO53Au_V3snGz",
+    "runId" : "AGp0l90HqQOJMNn-JZhjCR9VJ0Qz",
+    "modelStepId" : "MessageFlow_4",
+    "messageType" : "INPUT",
+    "messageFormat" : "TEXT",
+    "mimeType" : "application/octet-stream",
+    "payloadSize" : "142",
+    "message" : "name,type,price\r\napple,fruit,30",
+    "activityName" : "logAdapterProcessing",
+    "stepName" : "HTTPS",
+    "childCount" : 2,
+    "traceId" : "204",
+    "branchId" : "1",
+    "camelSplitIndex" : "",
+    "camelMulticastIndex" : "",
+    "headerProps" : [ {
+      "name" : "CamelHttpUrl",
+      "value" : "http://bd2ad380trial.it-cpitrial03-rt.cfapps.ap21.hana.ondemand.com/http/itemsdiscount",
+      "propertyType" : "HEADER_PROPERTY"
+    }, {
+      "name" : "CamelHttpPath",
+      "value" : "",
+      "propertyType" : "HEADER_PROPERTY"
+    } ],
+    "exchangeProps" : [ ],
+    "uniqueKeyFromData" : "MessageFlow_4"
+  }, {
+    "id" : 452,
+    "mplId" : "AGp0l917krne4ttsO53Au_V3snGz",
+    "runId" : "AGp0l90HqQOJMNn-JZhjCR9VJ0Qz",
+    "modelStepId" : "CallActivity_5",
+    "messageType" : "OUTPUT",
+    "messageFormat" : "TEXT",
+    "mimeType" : "application/octet-stream",
+    "payloadSize" : "31",
+    "message" : "name,type,price\r\napple,fruit,30",
+    "activityName" : "processExchange",
+    "stepName" : "CSV to XML Converter 1",
+    "childCount" : 3,
+    "traceId" : "201",
+    "branchId" : "1",
+    "camelSplitIndex" : "",
+    "camelMulticastIndex" : "",
+    "headerProps" : [ {
+      "name" : "CamelHttpUrl",
+      "value" : "http://bd2ad380trial.it-cpitrial03-rt.cfapps.ap21.hana.ondemand.com/http/itemsdiscount",
+      "propertyType" : "HEADER_PROPERTY"
+    }, {
+      "name" : "CamelHttpPath",
+      "value" : "",
+      "propertyType" : "HEADER_PROPERTY"
+    } ],
+    "exchangeProps" : [ {
+      "name" : "SAP_InboundMessageSizeInKB",
+      "value" : "1",
+      "propertyType" : "EXCHANGE_PROPERTY"
+    }, {
+      "name" : "SAP_InboundAttachmentsSizeInKB",
+      "value" : "0",
+      "propertyType" : "EXCHANGE_PROPERTY"
+    }, {
+      "name" : "SAP_XDSR_SAPPASSPORT",
+      "value" : "DsrPassport{traceFlags=0, componentName='CPI_bd2ad380trial', service=0, userId='', action='MessageReception', actionType=NO_ACTION, prevComponentName='CPI_bd2ad380trial', transactionId=7e7eeb19-1f27-48f8-88ea-975e5f2fccaa, clientNumber='n/a', componentType=22, rootContextId=7e7eeb19-1f27-48f8-88ea-975e5f2fccaa, connectionId=37dcfd98-af64-47ae-a3c8-784b3bd7f670, connectionCounter=1, varPartItems=null}",
+      "propertyType" : "EXCHANGE_PROPERTY"
+    } ],
+    "uniqueKeyFromData" : "CallActivity_5"
+  }, {
+    "id" : 453,
+    "mplId" : "AGp0l917krne4ttsO53Au_V3snGz",
+    "runId" : "AGp0l90HqQOJMNn-JZhjCR9VJ0Qz",
+    "modelStepId" : "CallActivity_90",
+    "messageType" : "OUTPUT",
+    "messageFormat" : "XML",
+    "mimeType" : "application/octet-stream",
+    "payloadSize" : "119",
+    "message" : "<?xml version='1.0' encoding='UTF-8'?><Items><Item><name>apple</name><type>fruit</type><price>30</price></Item></Items>",
+    "activityName" : "processExchange",
+    "stepName" : "Message Mapping 1",
+    "childCount" : 4,
+    "traceId" : "202",
+    "branchId" : "1",
+    "camelSplitIndex" : "",
+    "camelMulticastIndex" : "",
+    "headerProps" : [ {
+      "name" : "CamelHttpUrl",
+      "value" : "http://bd2ad380trial.it-cpitrial03-rt.cfapps.ap21.hana.ondemand.com/http/itemsdiscount",
+      "propertyType" : "HEADER_PROPERTY"
+    }, {
+      "name" : "CamelHttpPath",
+      "value" : "",
+      "propertyType" : "HEADER_PROPERTY"
+    } ],
+    "exchangeProps" : [ {
+      "name" : "SAP_InboundMessageSizeInKB",
+      "value" : "1",
+      "propertyType" : "EXCHANGE_PROPERTY"
+    }, {
+      "name" : "SAP_InboundAttachmentsSizeInKB",
+      "value" : "0",
+      "propertyType" : "EXCHANGE_PROPERTY"
+    }, {
+      "name" : "SAP_XDSR_SAPPASSPORT",
+      "value" : "DsrPassport{traceFlags=0, componentName='CPI_bd2ad380trial', service=0, userId='', action='MessageReception', actionType=NO_ACTION, prevComponentName='CPI_bd2ad380trial', transactionId=7e7eeb19-1f27-48f8-88ea-975e5f2fccaa, clientNumber='n/a', componentType=22, rootContextId=7e7eeb19-1f27-48f8-88ea-975e5f2fccaa, connectionId=37dcfd98-af64-47ae-a3c8-784b3bd7f670, connectionCounter=1, varPartItems=null}",
+      "propertyType" : "EXCHANGE_PROPERTY"
+    } ],
+    "uniqueKeyFromData" : "CallActivity_90"
+  }, {
+    "id" : 454,
+    "mplId" : "AGp0l917krne4ttsO53Au_V3snGz",
+    "runId" : "AGp0l90HqQOJMNn-JZhjCR9VJ0Qz",
+    "modelStepId" : "EndEvent_2",
+    "messageType" : "OUTPUT",
+    "messageFormat" : "XML",
+    "mimeType" : "application/octet-stream",
+    "payloadSize" : "142",
+    "message" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Items><Item><name>apple</name><type>fruit</type><price>30</price><discount>2</discount></Item></Items>",
+    "activityName" : "processExchange",
+    "stepName" : "End",
+    "childCount" : 5,
+    "traceId" : "205",
+    "branchId" : "1",
+    "camelSplitIndex" : "",
+    "camelMulticastIndex" : "",
+    "headerProps" : [ {
+      "name" : "CamelHttpUrl",
+      "value" : "http://bd2ad380trial.it-cpitrial03-rt.cfapps.ap21.hana.ondemand.com/http/itemsdiscount",
+      "propertyType" : "HEADER_PROPERTY"
+    }, {
+      "name" : "CamelHttpPath",
+      "value" : "",
+      "propertyType" : "HEADER_PROPERTY"
+    } ],
+    "exchangeProps" : [ {
+      "name" : "SAP_InboundMessageSizeInKB",
+      "value" : "1",
+      "propertyType" : "EXCHANGE_PROPERTY"
+    }, {
+      "name" : "SAP_InboundAttachmentsSizeInKB",
+      "value" : "0",
+      "propertyType" : "EXCHANGE_PROPERTY"
+    }, {
+      "name" : "SAP_XDSR_SAPPASSPORT",
+      "value" : "DsrPassport{traceFlags=0, componentName='CPI_bd2ad380trial', service=0, userId='', action='MessageReception', actionType=NO_ACTION, prevComponentName='CPI_bd2ad380trial', transactionId=7e7eeb19-1f27-48f8-88ea-975e5f2fccaa, clientNumber='n/a', componentType=22, rootContextId=7e7eeb19-1f27-48f8-88ea-975e5f2fccaa, connectionId=37dcfd98-af64-47ae-a3c8-784b3bd7f670, connectionCounter=1, varPartItems=null}",
+      "propertyType" : "EXCHANGE_PROPERTY"
+    } ],
+    "uniqueKeyFromData" : "EndEvent_2"
+  } ],
+  "mockRun" : false,
+  "testSuiteName" : ""
+}
